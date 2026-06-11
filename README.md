@@ -99,7 +99,7 @@ Markdown_Archived_Event
 Clone the repository:
 
 ```bash
-git clone https://github.com/<your-account>/design-knowledge-engine.git
+git clone https://github.com/9z4k8fjtw4-dotcom/design-knowledge-engine.git
 cd design-knowledge-engine
 ```
 
@@ -165,27 +165,52 @@ Regenerate Markdown:
 python automation/scripts/design_knowledge_engine.py markdown
 ```
 
-Confirm and archive:
-
-```bash
-python automation/scripts/design_knowledge_engine.py confirm --file filename.png --result review
-```
-
 Check status:
 
 ```bash
 python automation/scripts/design_knowledge_engine.py status
 ```
 
-## Demo
+View files pending confirmation:
 
-Input:
-
-```text
-sample_data/garden_dress.jpg
+```bash
+ls sample_output/inbox/03_pending_confirm
 ```
 
-Output:
+Confirm and archive using the actual generated image filename:
+
+```bash
+python automation/scripts/design_knowledge_engine.py confirm --file <generated-file-name> --result review
+```
+
+Replace `<generated-file-name>` with the actual file shown in `sample_output/inbox/03_pending_confirm/`.
+
+## Demo
+
+Put your own image into:
+
+```text
+sample_data/image_batch/
+```
+
+Example input path:
+
+```text
+sample_data/image_batch/garden_dress.jpg
+```
+
+Then run:
+
+```bash
+python automation/scripts/design_knowledge_engine.py import-batch
+python automation/scripts/design_knowledge_engine.py analyze --tags reference image review
+python automation/scripts/design_knowledge_engine.py markdown
+python automation/scripts/design_knowledge_engine.py status
+ls sample_output/inbox/03_pending_confirm
+python automation/scripts/design_knowledge_engine.py confirm --file <generated-file-name> --result review
+```
+
+Expected output example:
 
 ```text
 sample_output/garden_dress.md
