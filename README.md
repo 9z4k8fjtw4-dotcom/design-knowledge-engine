@@ -1,5 +1,9 @@
 # Design Knowledge Engine
 
+[![Tests](https://github.com/9z4k8fjtw4-dotcom/design-knowledge-engine/actions/workflows/test.yml/badge.svg)](https://github.com/9z4k8fjtw4-dotcom/design-knowledge-engine/actions/workflows/test.yml)
+[![Latest Release](https://img.shields.io/github/v/release/9z4k8fjtw4-dotcom/design-knowledge-engine)](https://github.com/9z4k8fjtw4-dotcom/design-knowledge-engine/releases)
+[![License](https://img.shields.io/github/license/9z4k8fjtw4-dotcom/design-knowledge-engine)](LICENSE)
+
 Turn visual inspiration into structured knowledge.
 
 A local-first workflow that converts image collections into searchable Markdown knowledge cards and automatically organizes them into a knowledge base.
