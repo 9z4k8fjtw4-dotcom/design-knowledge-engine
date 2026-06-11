@@ -1,0 +1,61 @@
+{
+  "project": "Design-Knowledge-Engine",
+  "schema_version": 1,
+  "paths": {
+    "inbox_new": "sample_data/inbox/01_new_images",
+    "inbox_pending_analysis": "sample_output/inbox/02_pending_analysis",
+    "inbox_pending_confirm": "sample_output/inbox/03_pending_confirm",
+    "inbox_rejected": "sample_output/inbox/04_rejected",
+    "source_batch": "sample_data/image_batch",
+    "assets_raw": "sample_output/assets/raw",
+    "assets_reviewed": "sample_output/assets/reviewed",
+    "assets_archive": "sample_output/assets/archive",
+    "design_archive": "sample_output/knowledge_base/09_image_analysis_archive",
+    "logs": "automation/logs",
+    "database": "automation/database"
+  },
+  "image_extensions": [
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".webp",
+    ".gif",
+    ".tif",
+    ".tiff"
+  ],
+  "rename": {
+    "max_tag_parts": 3,
+    "default_tags": [
+      "uncategorized",
+      "image",
+      "pending"
+    ],
+    "sequence_width": 3
+  },
+  "markdown": {
+    "default_category": "04_review",
+    "categories": {
+      "style": "01_style",
+      "success": "02_success",
+      "failure": "03_failure",
+      "review": "04_review"
+    }
+  },
+  "future_fields_reserved": [
+    "embedding_id",
+    "vector_db_id",
+    "agent_task_id",
+    "rag_source_id",
+    "chunk_ids",
+    "model_versions",
+    "reviewer",
+    "score",
+    "source_app",
+    "source_project",
+    "rights_status",
+    "manual_notes",
+    "linked_design_rule",
+    "linked_success_case",
+    "linked_failure_case"
+  ]
+}

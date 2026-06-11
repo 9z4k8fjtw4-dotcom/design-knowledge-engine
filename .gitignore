@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# Runtime config
+automation/config/settings.json
+
+# Runtime database and logs
+automation/database/
+automation/logs/
+
+# Local test inputs
+sample_data/**/*.jpg
+sample_data/**/*.jpeg
+sample_data/**/*.png
+sample_data/**/*.webp
+sample_data/**/*.gif
+sample_data/**/*.tif
+sample_data/**/*.tiff
+
+# Local generated outputs
+sample_output/**
+
+# Keep mock documentation and directory placeholders
+!sample_data/README.md
+!sample_output/README.md
+!sample_output/garden_dress.md
+!sample_output/**/
+!sample_data/**/.gitkeep
+!sample_output/**/.gitkeep
