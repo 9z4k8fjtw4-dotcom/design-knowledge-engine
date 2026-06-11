@@ -4,10 +4,20 @@ This repository uses mock folders for local tests. Do not place private producti
 
 ```text
 Design-Knowledge-Engine
+├── .github
+│   └── workflows
+│       └── test.yml
 ├── AGENTS.md
-├── DIRECTORY_STRUCTURE.md
+├── docs
+│   ├── DIRECTORY_STRUCTURE.md
+│   ├── FINAL_RELEASE_AUDIT.md
+│   ├── FINAL_RELEASE_CHECK.md
+│   ├── GITHUB_UPLOAD_GUIDE.md
+│   ├── OPEN_SOURCE_REVIEW.md
+│   └── RELEASE_GUIDE.md
 ├── PROJECT_CONTEXT.md
 ├── README.md
+├── RELEASE_NOTES_v0.1.0.md
 ├── requirements.txt
 ├── sample_data
 │   ├── README.md
@@ -26,6 +36,10 @@ Design-Knowledge-Engine
 │   │   └── 04_rejected
 │   └── knowledge_base
 │       └── 09_image_analysis_archive
+├── tests
+│   ├── test_config_validation.py
+│   ├── test_markdown_generation.py
+│   └── test_path_compatibility.py
 └── automation
     ├── config
     │   └── settings.example.json

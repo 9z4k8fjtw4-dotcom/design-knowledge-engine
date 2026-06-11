@@ -290,3 +290,11 @@ Do not commit:
 - Production database files
 - Runtime logs
 - Private knowledge base notes
+
+## Documentation
+
+- [Directory Structure](docs/DIRECTORY_STRUCTURE.md)
+- [Release Guide](docs/RELEASE_GUIDE.md)
+- [GitHub Upload Guide](docs/GITHUB_UPLOAD_GUIDE.md)
+- [Open Source Review](docs/OPEN_SOURCE_REVIEW.md)
+- [Final Release Audit](docs/FINAL_RELEASE_AUDIT.md)

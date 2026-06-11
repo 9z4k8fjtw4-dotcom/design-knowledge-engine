@@ -62,5 +62,5 @@ v0.1.0
 Design Knowledge Engine v0.1.0
 ```
 
-6. Paste the contents of `RELEASE_NOTES_v0.1.0.md`.
+6. Paste the contents of [`../RELEASE_NOTES_v0.1.0.md`](../RELEASE_NOTES_v0.1.0.md).
 7. Publish the release.

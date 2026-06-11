@@ -1,19 +1,11 @@
 # Design Knowledge Engine v0.1.0
 
-Initial Open Source Preview
+Initial open-source preview release.
 
 ## Features
 
 - Image analysis workflow
-- Structured tagging
-- Markdown generation
-- Knowledge card creation
+- Markdown knowledge generation
 - Knowledge base archiving
-- Local-first workflow
 - Cross-platform support
-
-## Known Limitations
-
-- Early preview release
-- Limited configuration options
-- No GUI yet
+- Automated testing
