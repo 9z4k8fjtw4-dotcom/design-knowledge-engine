@@ -20,6 +20,16 @@ Markdown Cards
 Knowledge Base
 ```
 
+## Architecture
+
+```mermaid
+flowchart TD
+    A[Input Images] --> B[Visual Analysis]
+    B --> C[Structured Tags]
+    C --> D[Markdown Cards]
+    D --> E[Knowledge Base]
+```
+
 Design Knowledge Engine is not a fashion project, not an AI model project, and not an Obsidian plugin. It is a local workflow engine for turning image collections into structured Markdown knowledge.
 
 ## Why It Exists
