@@ -4,6 +4,8 @@
 [![Latest Release](https://img.shields.io/github/v/release/9z4k8fjtw4-dotcom/design-knowledge-engine)](https://github.com/9z4k8fjtw4-dotcom/design-knowledge-engine/releases)
 [![License](https://img.shields.io/github/license/9z4k8fjtw4-dotcom/design-knowledge-engine)](LICENSE)
 
+## Project Overview
+
 Turn visual inspiration into structured knowledge.
 
 A local-first workflow that converts image collections into searchable Markdown knowledge cards and automatically organizes them into a knowledge base.
@@ -20,19 +22,7 @@ Markdown Cards
 Knowledge Base
 ```
 
-## Architecture
-
-```mermaid
-flowchart TD
-    A[Input Images] --> B[Visual Analysis]
-    B --> C[Structured Tags]
-    C --> D[Markdown Cards]
-    D --> E[Knowledge Base]
-```
-
 Design Knowledge Engine is not a fashion project, not an AI model project, and not an Obsidian plugin. It is a local workflow engine for turning image collections into structured Markdown knowledge.
-
-## Why It Exists
 
 Visual research is easy to collect and hard to organize. Screenshots, references, mood boards, and downloaded images often stay trapped in folders with no reusable structure.
 
@@ -44,65 +34,7 @@ Design Knowledge Engine gives that collection a repeatable path:
 - Knowledge Management
 - Optional Obsidian Integration
 
-## Quick Demo
-
-Input:
-
-```text
-sample_data/garden_dress.jpg
-```
-
-Output:
-
-```text
-sample_output/garden_dress.md
-```
-
-Example Markdown card:
-
-```markdown
-# Garden Dress
-
-## Summary
-
-Romantic garden-inspired dress with soft pastel colors and floral details.
-
-## Tags
-
-* Garden
-* Floral
-* Romantic
-* Pastel
-* Lace
-* Vintage
-
-## Color Palette
-
-* Cream White
-* Soft Pink
-* Sage Green
-
-## Mood
-
-* Gentle
-* Dreamy
-* Elegant
-
-## Design Elements
-
-* Lace trim
-* Ribbon bow
-* Floral embroidery
-* Layered skirt
-
-## Possible Use Cases
-
-* Fashion Design
-* Trend Research
-* Inspiration Collection
-```
-
-## Core Capabilities
+Core capabilities:
 
 - Image scanning
 - SHA256 hash deduplication
@@ -112,22 +44,7 @@ Romantic garden-inspired dress with soft pastel colors and floral details.
 - Knowledge base archiving
 - Reserved metadata fields for future retrieval or automation workflows
 
-## Why Not Just Use ChatGPT?
-
-Traditional AI chat analysis:
-
-- One image at a time
-- Difficult to organize
-- Hard to build long-term knowledge
-
-Design Knowledge Engine:
-
-- Batch processing
-- Structured outputs
-- Searchable knowledge base
-- Long-term visual knowledge accumulation
-
-## Use Cases
+Use cases:
 
 - Fashion Design Research
 - Architecture Reference Collection
@@ -135,6 +52,47 @@ Design Knowledge Engine:
 - Illustration Style Library
 - Photography Mood Boards
 - Pinterest Archive Management
+
+Documentation:
+
+- [Directory Structure](docs/DIRECTORY_STRUCTURE.md)
+- [Release Guide](docs/RELEASE_GUIDE.md)
+- [GitHub Upload Guide](docs/GITHUB_UPLOAD_GUIDE.md)
+- [Open Source Review](docs/OPEN_SOURCE_REVIEW.md)
+- [Final Release Audit](docs/FINAL_RELEASE_AUDIT.md)
+
+## Architecture
+
+```mermaid
+flowchart TD
+    A[Input Images] --> B[Visual Analysis]
+    B --> C[Structured Tags]
+    C --> D[Markdown Cards]
+    D --> E[Knowledge Base]
+```
+
+State machine:
+
+```text
+new
+pending_analysis
+pending_confirm
+archived
+rejected
+duplicate
+error
+```
+
+Event flow:
+
+```text
+New_Image_Event
+Image_Indexed_Event
+Image_Renamed_Event
+Image_Analyzed_Event
+Human_Confirmed_Event
+Markdown_Archived_Event
+```
 
 ## Installation
 
@@ -219,50 +177,86 @@ Check status:
 python automation/scripts/design_knowledge_engine.py status
 ```
 
-## Optional Obsidian Integration
+## Demo
 
-This project is not an Obsidian plugin.
-
-This project does not install Obsidian.
-
-This project does not depend on Obsidian.
-
-Generated output is standard Markdown and can be used with:
-
-- Obsidian
-- VS Code
-- Typora
-- Logseq
-- Any Markdown-based knowledge system
-
-## State Machine
+Input:
 
 ```text
-new
-pending_analysis
-pending_confirm
-archived
-rejected
-duplicate
-error
+sample_data/garden_dress.jpg
 ```
 
-## Event Flow
+Output:
 
 ```text
-New_Image_Event
-Image_Indexed_Event
-Image_Renamed_Event
-Image_Analyzed_Event
-Human_Confirmed_Event
-Markdown_Archived_Event
+sample_output/garden_dress.md
 ```
 
-## What is NOT included
+Demo screenshot:
 
-This repository only contains the workflow engine.
+![Design Knowledge Engine demo screenshot](docs/assets/demo-screenshot.svg)
 
-Private assets are intentionally excluded:
+## Example Output
+
+```markdown
+# Garden Dress
+
+## Summary
+
+Romantic garden-inspired dress with soft pastel colors and floral details.
+
+## Tags
+
+* Garden
+* Floral
+* Romantic
+* Pastel
+* Lace
+* Vintage
+
+## Color Palette
+
+* Cream White
+* Soft Pink
+* Sage Green
+
+## Mood
+
+* Gentle
+* Dreamy
+* Elegant
+
+## Design Elements
+
+* Lace trim
+* Ribbon bow
+* Floral embroidery
+* Layered skirt
+
+## Possible Use Cases
+
+* Fashion Design
+* Trend Research
+* Inspiration Collection
+```
+
+Why not just use ChatGPT?
+
+Traditional AI chat analysis:
+
+- One image at a time
+- Difficult to organize
+- Hard to build long-term knowledge
+
+Design Knowledge Engine:
+
+- Batch processing
+- Structured outputs
+- Searchable knowledge base
+- Long-term visual knowledge accumulation
+
+What is not included:
+
+This repository only contains the workflow engine. Private assets are intentionally excluded:
 
 - Design archives
 - Commercial case studies
@@ -272,29 +266,9 @@ Private assets are intentionally excluded:
 - Private image collections
 - Internal business documents
 
-## Roadmap
+## License
 
-v0.1
-
-Markdown workflow
-
-v0.2
-
-CLI package
-
-v0.3
-
-Batch tagging
-
-v0.4
-
-Embedding search
-
-v1.0
-
-Visual knowledge engine
-
-## Data Privacy
+This project is released under the [MIT License](LICENSE).
 
 Do not commit:
 
@@ -304,11 +278,3 @@ Do not commit:
 - Production database files
 - Runtime logs
 - Private knowledge base notes
-
-## Documentation
-
-- [Directory Structure](docs/DIRECTORY_STRUCTURE.md)
-- [Release Guide](docs/RELEASE_GUIDE.md)
-- [GitHub Upload Guide](docs/GITHUB_UPLOAD_GUIDE.md)
-- [Open Source Review](docs/OPEN_SOURCE_REVIEW.md)
-- [Final Release Audit](docs/FINAL_RELEASE_AUDIT.md)
