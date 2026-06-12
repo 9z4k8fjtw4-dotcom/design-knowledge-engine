@@ -4,6 +4,10 @@
 [![Latest Release](https://img.shields.io/github/v/release/9z4k8fjtw4-dotcom/design-knowledge-engine)](https://github.com/9z4k8fjtw4-dotcom/design-knowledge-engine/releases)
 [![License](https://img.shields.io/github/license/9z4k8fjtw4-dotcom/design-knowledge-engine)](LICENSE)
 
+Turn messy design inspiration images into structured Markdown knowledge cards.
+
+Design Knowledge Engine is a local-first workflow that helps designers, researchers, and AI builders turn image collections into searchable, reusable knowledge bases.
+
 ## Project Overview
 
 Turn visual inspiration into structured knowledge.
@@ -25,6 +29,19 @@ Knowledge Base
 Design Knowledge Engine is not a fashion project, not an AI model project, and not an Obsidian plugin. It is a local workflow engine for turning image collections into structured Markdown knowledge.
 
 Visual research is easy to collect and hard to organize. Screenshots, references, mood boards, and downloaded images often stay trapped in folders with no reusable structure.
+
+## Who Is This For?
+
+- Designers managing large inspiration collections
+- Researchers building visual reference libraries
+- AI builders experimenting with image-to-knowledge workflows
+- Teams turning visual materials into reusable documentation
+
+## Before / After
+
+| Before | After |
+| --- | --- |
+| A folder full of unsorted inspiration images. | Structured Markdown cards with Summary, Tags, Color Palette, Mood, Design Elements, and Use Cases. |
 
 Design Knowledge Engine gives that collection a repeatable path:
 
@@ -69,6 +86,7 @@ flowchart TD
     B --> C[Structured Tags]
     C --> D[Markdown Cards]
     D --> E[Knowledge Base]
+    E --> F[Searchable Design Archive]
 ```
 
 State machine:
@@ -138,6 +156,37 @@ Initialize runtime folders:
 ```bash
 python automation/scripts/design_knowledge_engine.py init
 ```
+
+## Quick Start
+
+```bash
+git clone https://github.com/9z4k8fjtw4-dotcom/design-knowledge-engine.git
+cd design-knowledge-engine
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+cp automation/config/settings.example.json automation/config/settings.json
+python automation/scripts/design_knowledge_engine.py init
+```
+
+Put your own images into:
+
+```text
+sample_data/image_batch/
+```
+
+Run:
+
+```bash
+python automation/scripts/design_knowledge_engine.py import-batch
+python automation/scripts/design_knowledge_engine.py analyze
+python automation/scripts/design_knowledge_engine.py markdown
+python automation/scripts/design_knowledge_engine.py status
+ls sample_output/inbox/03_pending_confirm
+python automation/scripts/design_knowledge_engine.py confirm --file <generated-file-name> --result review
+```
+
+Replace `<generated-file-name>` with the actual image filename shown in `sample_output/inbox/03_pending_confirm/`.
 
 ## Usage
 
